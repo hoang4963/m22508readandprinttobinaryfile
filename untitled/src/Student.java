@@ -1,6 +1,7 @@
 import java.io.Serializable;
 
 public class Student implements Serializable {
+//    bat buoc phai Serializable class student de chuyen doi tuong sang dang byte
     private int id;
 
     private String name;

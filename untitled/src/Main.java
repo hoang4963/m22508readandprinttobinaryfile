@@ -22,6 +22,7 @@ public class Main {
         students.add(new Student(3, "Chuc", "Ha Nam"));
         students.add(new Student(4, "Mai", "Ha Nam"));
         students.add(new Student(5, "Quang", "Ha Nam"));
+//        ghi dang object vao file vi object da duoc chuyen sang dang byte
         writeToFile("student.txt",students);
         List<Student> readStudentFromFile = readDataFromFile("student.txt");
         for (Student student: readStudentFromFile
@@ -34,6 +35,7 @@ public class Main {
         try{
             FileInputStream fis = new FileInputStream(path);
             ObjectInputStream ois = new ObjectInputStream(fis);
+//            doc file dang object vi object da duoc chuyen sang dang byte
             students = (List<Student>) ois.readObject();
             fis.close();
             ois.close();
