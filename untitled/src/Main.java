@@ -33,7 +33,9 @@ public class Main {
     public static List<Student> readDataFromFile(String path){
         List<Student> students = new ArrayList<>();
         try{
+//             Tạo một input stream để đọc từ object File đã chỉ định.
             FileInputStream fis = new FileInputStream(path);
+//          ObjectInputStream quản lý một đối tượng InputStream và cung cấp các phương thức để đọc dữ liệu nguyên thuỷ hoặc đối tượng từ InputStream mà nó quản lý.
             ObjectInputStream ois = new ObjectInputStream(fis);
 //            doc file dang object vi object da duoc chuyen sang dang byte
             students = (List<Student>) ois.readObject();
